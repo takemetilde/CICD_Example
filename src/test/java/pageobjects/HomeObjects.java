@@ -12,7 +12,7 @@ public class HomeObjects extends BaseObject {
 
     private By aboutTabLocator = By.name("About");
     private By searchBarLocator = By.id("q");
-    private String baseUrl = "www.seleniumhq.org";
+    private String baseUrl = "http://www.seleniumhq.org";
 
 
     //~ Constructors ---------------------------------------------------------------------------------------------------

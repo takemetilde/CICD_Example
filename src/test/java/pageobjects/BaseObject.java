@@ -8,6 +8,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * Created by HHER on 9/4/2017.
  */
@@ -40,8 +43,12 @@ public class BaseObject {
      * @param url
      */
     public void get(String url) {
-        logger.info("Navigating to " + url);
-        driver.get(url);
+        if (validateUrl(url)) {
+            logger.info("Navigating to " + url);
+            driver.get(url);
+        } else {
+            logger.info("The url is invalid: " + url);
+        }
     }
 
     /**
@@ -96,5 +103,15 @@ public class BaseObject {
             logger.info(locator.toString() + " is not displayed: " + exp);
             return false;
         }
+    }
+
+    public Boolean validateUrl(String url) {
+        Pattern pattern = Pattern.compile("(http://|https://)(.+)");
+        Matcher matcher = pattern.matcher(url);
+
+        if (matcher.matches())
+            return true;
+        else
+            return false;
     }
 }
