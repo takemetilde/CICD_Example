@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Regression Suite]">
+  <test name="Tests(failed)">
+    <classes>
+      <class name="tests.HomeTests">
+        <methods>
+          <include name="TC_0010_ClickAboutTabSuccessful"/>
+          <include name="setUp"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.HomeTests -->
+    </classes>
+  </test> <!-- Tests(failed) -->
+</suite> <!-- Failed suite [Regression Suite] -->

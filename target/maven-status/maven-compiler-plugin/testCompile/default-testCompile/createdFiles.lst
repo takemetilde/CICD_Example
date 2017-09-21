@@ -1,6 +1,6 @@
-tests\BaseTest$1.class
-tests\BaseTest.class
 tests\HomeTests.class
 pageobjects\HomeObjects.class
 pageobjects\AboutObjects.class
+pageobjects\Config.class
+tests\BaseTest.class
 pageobjects\BaseObject.class

@@ -1,43 +1,115 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Regression Suite" duration-ms="2321" started-at="2017-09-20T18:20:20Z" finished-at="2017-09-20T18:20:22Z">
-    <groups>
-    </groups>
-    <test name="Tests" duration-ms="2321" started-at="2017-09-20T18:20:20Z" finished-at="2017-09-20T18:20:22Z">
-      <class name="tests.HomeTests">
-        <test-method status="PASS" signature="setup()[pri:0, instance:tests.HomeTests@6a41eaa2]" name="setup" is-config="true" duration-ms="3596" started-at="2017-09-20T14:20:17Z" finished-at="2017-09-20T14:20:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:tests.HomeTests@6a41eaa2]" name="setUp" is-config="true" duration-ms="14" started-at="2017-09-20T14:20:20Z" finished-at="2017-09-20T14:20:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="TC_0010_ClickAboutTabSuccessful()[pri:0, instance:tests.HomeTests@6a41eaa2]" name="TC_0010_ClickAboutTabSuccessful" duration-ms="2279" started-at="2017-09-20T14:20:20Z" finished-at="2017-09-20T14:20:22Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"name","selector":"About"}
+<html>
+<head>
+<title>TestNG:  Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Sep 20 14:20:20 EDT 2017</td>
+</tr>
+<tr><td>Total time:</td><td>2 seconds (2321 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.HomeTests.TC_0010_ClickAboutTabSuccessful()'><b>TC_0010_ClickAboutTabSuccessful</b><br>Test class: tests.HomeTests</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;name&quot;,&quot;selector&quot;:&quot;About&quot;}
   (Session info: chrome=56.0.2924.76)
   (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
-System info: host: 'WIN7PROF-PC', ip: '192.168.1.85', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_72'
+Build info: version: &apos;3.5.3&apos;, revision: &apos;a88d25fe6b&apos;, time: &apos;2017-08-29T12:42:44.417Z&apos;
+System info: host: &apos;WIN7PROF-PC&apos;, ip: &apos;192.168.1.85&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_72&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
 Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=true, webStorageEnabled=true, takesScreenshot=true, browserName=chrome, javascriptEnabled=true, platformName=XP, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir1516_29311}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, hasMetadata=true, handlesAlerts=true, databaseEnabled=false, version=56.0.2924.76, browserConnectionEnabled=false, nativeEvents=true, webdriver.remote.sessionid=9cef3e1b5f754f078996900c713dfc78, locationContextEnabled=true, cssSelectorsEnabled=true}]
 Session ID: 9cef3e1b5f754f078996900c713dfc78
-*** Element info: {Using=name, value=About}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"name","selector":"About"}
+*** Element info: {Using=name, value=About}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:82)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:416)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:494)
+	at org.openqa.selenium.By$ByName.findElement(By.java:303)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:408)
+	at pageobjects.BaseObject.find(BaseObject.java:60)
+	at pageobjects.BaseObject.click(BaseObject.java:69)
+	at pageobjects.HomeObjects.navigateToAboutTab(HomeObjects.java:41)
+	at tests.HomeTests.TC_0010_ClickAboutTabSuccessful(HomeTests.java:31)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace480490520", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace480490520'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;name&quot;,&quot;selector&quot;:&quot;About&quot;}
   (Session info: chrome=56.0.2924.76)
   (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.5.3', revision: 'a88d25fe6b', time: '2017-08-29T12:42:44.417Z'
-System info: host: 'WIN7PROF-PC', ip: '192.168.1.85', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_72'
+Build info: version: &apos;3.5.3&apos;, revision: &apos;a88d25fe6b&apos;, time: &apos;2017-08-29T12:42:44.417Z&apos;
+System info: host: &apos;WIN7PROF-PC&apos;, ip: &apos;192.168.1.85&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_72&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
 Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=true, webStorageEnabled=true, takesScreenshot=true, browserName=chrome, javascriptEnabled=true, platformName=XP, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\ADMINI~1\AppData\Local\Temp\scoped_dir1516_29311}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, hasMetadata=true, handlesAlerts=true, databaseEnabled=false, version=56.0.2924.76, browserConnectionEnabled=false, nativeEvents=true, webdriver.remote.sessionid=9cef3e1b5f754f078996900c713dfc78, locationContextEnabled=true, cssSelectorsEnabled=true}]
 Session ID: 9cef3e1b5f754f078996900c713dfc78
@@ -90,17 +162,9 @@ Session ID: 9cef3e1b5f754f078996900c713dfc78
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_0010_ClickAboutTabSuccessful -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:tests.HomeTests@6a41eaa2]" name="teardown" is-config="true" duration-ms="200" started-at="2017-09-20T14:20:22Z" finished-at="2017-09-20T14:20:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- tests.HomeTests -->
-    </test> <!-- Tests -->
-  </suite> <!-- Regression Suite -->
-</testng-results>
+</pre></div></td>
+<td>2</td>
+<td>tests.HomeTests@6a41eaa2</td></tr>
+</table><p>
+</body>
+</html>

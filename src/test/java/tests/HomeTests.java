@@ -31,6 +31,7 @@ public class HomeTests extends BaseTest {
         homeObjects.navigateToAboutTab();
         String actualUrl = driver.getCurrentUrl();
         String expectedUrl = homeObjects.getBaseUrl() + "/about/";
-        Assert.assertTrue(actualUrl == expectedUrl, "About URL = " + actualUrl);
+        Assert.assertTrue(actualUrl.equals(expectedUrl), "\nExpected Url: " + expectedUrl
+                + "\nActual Url: " + actualUrl);
     }
 }

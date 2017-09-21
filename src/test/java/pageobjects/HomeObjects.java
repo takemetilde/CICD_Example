@@ -10,7 +10,7 @@ public class HomeObjects extends BaseObject {
 
     //~ Instance Fields ------------------------------------------------------------------------------------------------
 
-    private By aboutTabLocator = By.name("About");
+    private By aboutTabLocator = By.linkText("About");
     private By searchBarLocator = By.id("q");
     private String baseUrl = "http://www.seleniumhq.org";
 
